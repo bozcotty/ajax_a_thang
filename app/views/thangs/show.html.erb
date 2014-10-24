@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @thang.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @thang.description %>
+</p>
+
+<%= link_to 'Edit', edit_thang_path(@thang) %> |
+<%= link_to 'Back', thangs_path %>

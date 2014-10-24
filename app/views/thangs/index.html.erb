@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>All the Thangs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @thangs.each do |thang| %>
+      <tr>
+        <td><%= thang.name %></td>
+        <td><%= thang.description %></td>
+        <td><%= link_to 'Show', thang %></td>
+        <td><%= link_to 'Edit', edit_thang_path(thang) %></td>
+        <td><%= link_to 'Destroy', thang, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Thang', new_thang_path %>
