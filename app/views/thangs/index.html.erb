@@ -2,7 +2,7 @@
 
 <h1>All the Thangs</h1>
 
-<table>
+<table id='index_list'>
   <thead>
     <tr>
       <th>Name</th>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= thang.name %></td>
         <td><%= thang.description %></td>
-        <td><%= link_to 'Show', thang %></td>
-        <td><%= link_to 'Edit', edit_thang_path(thang) %></td>
-        <td><%= link_to 'Destroy', thang, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', thang, id: "show_link", remote: true %></td>
+        <td><%= link_to 'Edit', edit_thang_path(thang), id: "edit_link", remote: true %></td>
+        <td><%= link_to 'Destroy', thang, id: "destroy_link", remote: true, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

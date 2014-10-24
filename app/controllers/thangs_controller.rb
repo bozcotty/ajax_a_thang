@@ -18,25 +18,19 @@ class ThangsController < ApplicationController
 
 
   def create
-    @thang = Thang.new(thang_params)
+    @thang = Thang.create!(thang_params)
 
     respond_to do |format|
-      if @thang.save
-        format.html { redirect_to @thang, notice: 'Thang was successfully created.' }
-      else
-        format.html { render :new }
-      end
+        format.html { redirect_to root, notice: 'Thang was successfully created.' }
+        format.js
     end
   end
 
   def update
+    @thang.update(thang_params)
     respond_to do |format|
-      if @thang.update(thang_params)
-        format.html { redirect_to @thang, notice: 'Thang was successfully updated.' }
-        format.js
-      else
-        format.html { render :edit }
-      end
+      format.html { redirect_to @thang, notice: 'Thang was successfully updated.' }
+      format.js
     end
   end
 

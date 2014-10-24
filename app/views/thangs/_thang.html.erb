@@ -1,0 +1,7 @@
+<tr id="<%= thang.id %>">
+  <td><%= thang.name %></td>
+  <td><%= thang.description %></td>
+  <td><%= link_to 'Show', thang %></td>
+  <td><%= link_to 'Edit', edit_thang_path(thang), remote: true %></td>
+  <td><%= link_to 'Destroy', thang, method: :delete,
+            remote: true, data: { confirm: 'Are you sure?' } %></td>
