@@ -7,7 +7,14 @@ class ThangsController < ApplicationController
   end
 
   def show
+    respond_to do |format|
+      format.html # show.html.erb
+      format.js {
+        @content = render_to_string(:partial => 'show')
+      }
+ end
   end
+
 
   def new
     @thang = Thang.new
@@ -21,8 +28,8 @@ class ThangsController < ApplicationController
     @thang = Thang.create!(thang_params)
 
     respond_to do |format|
-        format.html { redirect_to root, notice: 'Thang was successfully created.' }
-        format.js
+      format.html { redirect_to root, notice: 'Thang was successfully created.' }
+      format.js
     end
   end
 

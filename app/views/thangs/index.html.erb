@@ -5,8 +5,8 @@
 <table id='index_list'>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
+      <th class="stay">Name</th>
+      <th class="stay">Description</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,11 +14,11 @@
   <tbody>
     <% @thangs.each do |thang| %>
       <tr>
-        <td><%= thang.name %></td>
-        <td><%= thang.description %></td>
-        <td><%= link_to 'Show', thang, id: "show_link", remote: true %></td>
-        <td><%= link_to 'Edit', edit_thang_path(thang), id: "edit_link", remote: true %></td>
-        <td><%= link_to 'Destroy', thang, id: "destroy_link", remote: true, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class ="nama"><%= thang.name %></td>
+        <td class="descripo"><%= thang.description %></td>
+        <td><%= link_to 'Show', thang, remote: true %></td>
+        <td><%= link_to 'Edit', edit_thang_path(thang), remote: true %></td>
+        <td><%= link_to 'Destroy', thang, remote: true, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

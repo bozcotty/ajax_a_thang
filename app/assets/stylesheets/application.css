@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+ .nama {
+  width: 200px;
+ }
+
+ .descripo {
+  width: 400px;
+ }

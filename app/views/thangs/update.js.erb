@@ -1,0 +1,2 @@
+$('#edit_thang_<%= @thang.id %>').remove();
+$('tr#<%= @thang.id %>').replaceWith('<%= j render(@thang) %>');
