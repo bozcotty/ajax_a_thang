@@ -1,14 +1,15 @@
 <p id="notice"><%= notice %></p>
+<div id="show_thang">
+  <p>
+    <strong>Name:</strong>
+    <%= @thang.name %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @thang.name %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @thang.description %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @thang.description %>
-</p>
-
-<%= link_to 'Edit', edit_thang_path(@thang), remote: true %> |
-<%= link_to 'Back', thangs_path %>
+  <%= link_to 'Edit', edit_thang_path(@thang), remote: true %> |
+  <%= link_to 'Back', thangs_path %>
+</div>

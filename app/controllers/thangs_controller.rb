@@ -25,10 +25,9 @@ class ThangsController < ApplicationController
 
 
   def create
-    @thang = Thang.create!(thang_params)
-
+    @thang = Thang.create(thang_params)
     respond_to do |format|
-      format.html { redirect_to root, notice: 'Thang was successfully created.' }
+      format.html { redirect_to @thang, notice: 'Thang was successfully created.' }
       format.js
     end
   end
